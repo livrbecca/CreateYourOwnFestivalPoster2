@@ -1,0 +1,64 @@
+body {
+  background-color: white;
+}
+
+.show1 {
+  font-size: 8px;
+  position: fixed;
+  top: 0;
+}
+
+.show2 {
+  left: 90px;
+  font-size: 8px;
+  position: fixed;
+  top: 0;
+}
+
+.posterBox {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: #87f1ff #2cb40a #6b2737 #5f00ba;
+  width: 310px;
+  margin: auto;
+  height: 480px;
+}
+
+/* PALLETE */
+/* #87F1FF ELECTRIC BLUE */
+/* #6B2737  WINE */
+/* #FFD23F SUNGLOW */
+/* #EFAAC4 NADESHIKA PINK */
+/* #5F00BA PURPLE */
+ul {
+  font-size: 15px;
+  list-style-type: none;
+}
+
+li:first-child {
+  font-size: 45px;
+  padding: 9px;
+}
+
+li:nth-child(2) {
+  color: black;
+  font-size: 35px;
+  padding: 9px;
+}
+
+li:nth-child(3) {
+  color: black;
+  font-size: 30px;
+  padding: 4px;
+}
+
+li:nth-child(4) {
+  color: black;
+  font-size: 25px;
+  padding: 9px;
+}
+
+li {
+  float: left;
+  padding: 4px;
+}
