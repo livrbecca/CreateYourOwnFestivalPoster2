@@ -10,14 +10,9 @@
   border: 3px solid white;
   box-sizing: border-box;
   color: #000000;
-  /* display: flex;
-  font-weight: 100;
-  justify-content: center; */
-  /* line-height: 1rem; */
+
   letter-spacing: 0.15rem;
-  /* padding: 2rem; */
-  /* margin-left: 2rem; */
-  /* width: fit-content; */
+
   cursor: pointer;
   transform: rotate(-2deg);
 }
@@ -63,6 +58,7 @@
   border-color: #87f1ff #2cb40a #6b2737 #5f00ba;
   width: 310px;
   margin: auto;
+  display: block;
   height: 480px;
 }
 
@@ -78,14 +74,14 @@ ul {
 }
 
 li:first-child {
-  font-size: 45px;
-  padding: 9px;
+  font-size: 43px;
+  padding: 4px;
 }
 
 li:nth-child(2) {
   color: black;
   font-size: 35px;
-  padding: 9px;
+  padding: 4px;
 }
 
 li:nth-child(3) {
@@ -97,7 +93,17 @@ li:nth-child(3) {
 li:nth-child(4) {
   color: black;
   font-size: 25px;
-  padding: 9px;
+  padding: 4px;
+}
+li:nth-child(5) {
+  color: black;
+  font-size: 22px;
+  padding: 4px;
+}
+li:nth-child(6) {
+  color: black;
+  font-size: 16px;
+  padding: 4px;
 }
 
 li {

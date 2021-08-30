@@ -39,7 +39,7 @@ const Poster = () => {
 
   const getArtists = (len = "long") => {
     axios
-      .get(`https://api.spotify.com/v1/me/top/artists?time_range=${len}_term`, {
+      .get(`https://api.spotify.com/v1/me/top/artists?time_range=${len}_term&limit=25&offset=0`, {
         headers: {
           Authorization: `${tokenType} ${token}`,
         },
