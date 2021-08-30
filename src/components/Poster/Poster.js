@@ -35,6 +35,7 @@ const Poster = () => {
       setToken(localStorage.getItem("AT"));
     }
     getArtists();
+    // eslint-disable-next-line
   }, [token]);
 
   const getArtists = (len = "long") => {
