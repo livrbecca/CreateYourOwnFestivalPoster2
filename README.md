@@ -10,7 +10,7 @@ Users log into the app via their Spotify account (implicit grant authorization f
 ## To start: ``npm start``
 
 ## Deployment
-- Netlify link coming soon.
+- Demo the deployed project on Netlify: https://create-your-lineup.netlify.app
 
 ![lineup](https://user-images.githubusercontent.com/69110329/131407029-951a0797-cd34-4a33-8af6-e0919749600c.gif)
 
