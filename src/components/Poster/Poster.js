@@ -7,8 +7,6 @@ const Poster = () => {
   const tokenType = localStorage.getItem("tokenType");
   const [data, setData] = useState({});
 
-  //const FETCH_URL = `https://api.spotify.com/v1/me/top/artists?time_range=${len}_term&limit=10&offset=5`
-
   const getReturnedParamsFromSpotifyAuth = (hash) => {
     const stringAfterHashtag = hash.substring(1);
     const paramsInUrl = stringAfterHashtag.split("&");
@@ -40,11 +38,14 @@ const Poster = () => {
 
   const getArtists = (len = "long") => {
     axios
-      .get(`https://api.spotify.com/v1/me/top/artists?time_range=${len}_term&limit=25&offset=0`, {
-        headers: {
-          Authorization: `${tokenType} ${token}`,
-        },
-      })
+      .get(
+        `https://api.spotify.com/v1/me/top/artists?time_range=${len}_term&limit=25&offset=0`,
+        {
+          headers: {
+            Authorization: `${tokenType} ${token}`,
+          },
+        }
+      )
       .then((response) => {
         console.log("response", response);
         setData(response.data);
