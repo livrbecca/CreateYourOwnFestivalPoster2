@@ -1,16 +1,16 @@
 # Create Your Own Festival Poster
 
-- React App
+Users log into the app via their Spotify account (implicit grant authorization flow) and are able to view their personalised data relating to who their top artists are displayed as a festival poster line-up.
+
+# Stack
+- React App, built with CSS.
 - App build with mobile-first development in mind.
-- Users log in to Spotify (authorization) 
-- View their personal data relating to who their top artists are displayed as a festival poster
-- Component library: Boostrap for React & CSS
+- Spotify documentation link: https://developer.spotify.com/documentation/
 
 ## To start: ``npm start``
 
 ## Deployment
 - Netlify link coming soon.
 
-![Screenshot_20210826-183457](https://user-images.githubusercontent.com/69110329/131254691-516e55e2-a2c6-4fec-8b47-ec2c49525a72.jpg)
-
+![lineup](https://user-images.githubusercontent.com/69110329/131407029-951a0797-cd34-4a33-8af6-e0919749600c.gif)
 
