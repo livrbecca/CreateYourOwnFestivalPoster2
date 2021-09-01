@@ -1,6 +1,9 @@
+/* TOP CONTROL BUTTONS */
+
 .show1,
 .show2,
-.show3 {
+.show3,
+.show4 {
   font-size: 10px;
   position: static;
   top: 5px;
@@ -31,7 +34,8 @@
 
 .show1:after,
 .show2:after,
-.show3:after {
+.show3:after,
+.show4:after {
   content: "";
   width: calc(100% - 1px);
   height: calc(100% - 1px);
@@ -47,20 +51,105 @@
 
 .show1:focus,
 .show2:focus,
-.show3:focus {
+.show3:focus,
+.show4:focus {
   outline: 0;
   border-color: #87f1ffc5;
 }
+
+/* MAIN DIV / CONTAINER */
 
 .posterBox {
   border-width: 2px;
   border-style: dotted;
   border-color: #87f1ff #2cb40a #6b2737 #5f00ba;
-  width: 310px;
+  width: 340px;
   margin: auto;
   display: block;
   height: 480px;
+  word-wrap: break-word;
 }
+
+/* UL TAG */
+ul {
+  font-size: 17px;
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-position: inside;
+  /* height: inherit; */
+  /* width: inherit; */
+}
+/* A TAGS / LI TAGS */
+a:first-child {
+  font-size: 43px !important;
+  padding: 4px !important;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:nth-child(2) {
+  color: black;
+  font-size: 35px;
+  padding: 7px;
+}
+
+a:nth-child(3) {
+  color: black;
+  font-size: 34px;
+  padding: 7px;
+}
+
+a:nth-child(4) {
+  color: black;
+  font-size: 30px;
+  padding: 7px;
+}
+a:nth-child(5) {
+  color: black;
+  font-size: 27px;
+  padding: 4px;
+}
+a:nth-child(6) {
+  color: black;
+  font-size: 26px;
+  padding: 4px;
+}
+
+a:nth-child(7) {
+  color: black;
+  font-size: 24px;
+  padding: 4px;
+}
+
+a:nth-child(8) {
+  color: black;
+  font-size: 20px;
+  padding: 4px;
+}
+
+a {
+  text-align: center;
+  padding: 4px;
+  text-decoration: none !important;
+}
+a li:hover {
+  color: #87f1ff;
+  -webkit-text-stroke: 1px black;
+}
+
+/* .show4,
+.show4:active .show4:hover .show4:focus {
+  all: unset;
+} */
 
 /* PALLETE */
 /* #87F1FF ELECTRIC BLUE */
@@ -68,45 +157,3 @@
 /* #FFD23F SUNGLOW */
 /* #EFAAC4 NADESHIKA PINK */
 /* #5F00BA PURPLE */
-ul {
-  font-size: 15px;
-  list-style-type: none;
-}
-
-li:first-child {
-  font-size: 43px;
-  padding: 4px;
-}
-
-li:nth-child(2) {
-  color: black;
-  font-size: 35px;
-  padding: 4px;
-}
-
-li:nth-child(3) {
-  color: black;
-  font-size: 30px;
-  padding: 4px;
-}
-
-li:nth-child(4) {
-  color: black;
-  font-size: 25px;
-  padding: 4px;
-}
-li:nth-child(5) {
-  color: black;
-  font-size: 22px;
-  padding: 4px;
-}
-li:nth-child(6) {
-  color: black;
-  font-size: 16px;
-  padding: 4px;
-}
-
-li {
-  float: left;
-  padding: 4px;
-}

@@ -1,6 +1,7 @@
 import "./Poster.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Poster = () => {
   const [token, setToken] = useState("");
@@ -11,7 +12,6 @@ const Poster = () => {
     const stringAfterHashtag = hash.substring(1);
     const paramsInUrl = stringAfterHashtag.split("&");
     const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
-      
       const [key, value] = currentValue.split("=");
       accumulater[key] = value;
       return accumulater;
@@ -32,11 +32,11 @@ const Poster = () => {
     if (localStorage.getItem("AT")) {
       setToken(localStorage.getItem("AT"));
     }
-    getArtists();
+    getUsersTopArtists();
     // eslint-disable-next-line
   }, [token]);
 
-  const getArtists = (len = "long") => {
+  const getUsersTopArtists = (len = "long") => {
     axios
       .get(
         `https://api.spotify.com/v1/me/top/artists?time_range=${len}_term&limit=25&offset=0`,
@@ -47,9 +47,8 @@ const Poster = () => {
         }
       )
       .then((response) => {
-      
         setData(response.data);
-      
+        // console.log(data.items);
       })
       .catch((error) => {
         console.log(error);
@@ -58,21 +57,32 @@ const Poster = () => {
 
   return (
     <div>
-      <button onClick={() => getArtists("medium")} className="show1">
+      <button onClick={() => getUsersTopArtists("medium")} className="show1">
         6 months
       </button>
-      <button onClick={() => getArtists("short")} className="show2">
+      <button onClick={() => getUsersTopArtists("short")} className="show2">
         4 weeks
       </button>
-      <button onClick={() => getArtists()} className="show3">
+      <button onClick={() => getUsersTopArtists()} className="show3">
         all time
       </button>
+      <Link className="showsNearButton" to="/createplaylist">
+        <button className="show4">Create personalised playlist</button>
+      </Link>
       <h1>MYFEST</h1>
 
       <div className="posterBox">
         <ul>
           {data?.items
-            ? data.items.map((art, index) => <li key={index}>{art.name}</li>)
+            ? data.items.map((art, index) => (
+                <a
+                  href={`https://open.spotify.com/artist/${art.id}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <li key={index}>{art.name}</li>
+                </a>
+              ))
             : null}
         </ul>
       </div>
