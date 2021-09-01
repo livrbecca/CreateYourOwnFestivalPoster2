@@ -11,7 +11,7 @@ const Poster = () => {
     const stringAfterHashtag = hash.substring(1);
     const paramsInUrl = stringAfterHashtag.split("&");
     const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
-      console.log(currentValue);
+      
       const [key, value] = currentValue.split("=");
       accumulater[key] = value;
       return accumulater;
@@ -47,9 +47,9 @@ const Poster = () => {
         }
       )
       .then((response) => {
-        console.log("response", response);
+      
         setData(response.data);
-        console.log("response.data", response.data);
+      
       })
       .catch((error) => {
         console.log(error);
@@ -65,7 +65,7 @@ const Poster = () => {
         4 weeks
       </button>
       <button onClick={() => getArtists()} className="show3">
-        reset
+        all time
       </button>
       <h1>MYFEST</h1>
 
