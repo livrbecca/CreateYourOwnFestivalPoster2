@@ -1,7 +1,7 @@
 import "./Poster.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 
 const Poster = () => {
   const [token, setToken] = useState("");
@@ -67,9 +67,6 @@ const Poster = () => {
         <button onClick={() => getUsersTopArtists()} className="show3">
           all time
         </button>
-        <Link className="showsNearButton" to="/createplaylist">
-          <button className="show4">Create personalised playlist</button>
-        </Link>
       </div>
       <h1 className="posterHeader">MYFEST</h1>
 
