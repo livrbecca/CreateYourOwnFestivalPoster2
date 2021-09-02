@@ -57,30 +57,33 @@ const Poster = () => {
 
   return (
     <div>
-      <button onClick={() => getUsersTopArtists("medium")} className="show1">
-        6 months
-      </button>
-      <button onClick={() => getUsersTopArtists("short")} className="show2">
-        4 weeks
-      </button>
-      <button onClick={() => getUsersTopArtists()} className="show3">
-        all time
-      </button>
-      <Link className="showsNearButton" to="/createplaylist">
-        <button className="show4">Create personalised playlist</button>
-      </Link>
-      <h1>MYFEST</h1>
+      <div className="btnDiv">
+        <button onClick={() => getUsersTopArtists("medium")} className="show1">
+          6 months
+        </button>
+        <button onClick={() => getUsersTopArtists("short")} className="show2">
+          4 weeks
+        </button>
+        <button onClick={() => getUsersTopArtists()} className="show3">
+          all time
+        </button>
+        <Link className="showsNearButton" to="/createplaylist">
+          <button className="show4">Create personalised playlist</button>
+        </Link>
+      </div>
+      <h1 className="posterHeader">MYFEST</h1>
 
       <div className="posterBox">
         <ul>
           {data?.items
             ? data.items.map((art, index) => (
                 <a
+                  key={index}
                   href={`https://open.spotify.com/artist/${art.id}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <li key={index}>{art.name}</li>
+                  <li>{art.name}</li>
                 </a>
               ))
             : null}

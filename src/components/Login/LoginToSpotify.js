@@ -5,7 +5,7 @@ const SCOPES = [
   "user-top-read",
 ];
 const SCOPES_URL_PARAM = SCOPES.join(SPACE_DELIMITER);
-//REACT_APP_REDIRECT_URL=https://create-your-lineup.netlify.app/yourposter
+
 const LoginToSpotify = () => {
   const handleLogin = () => {
     window.location = `${process.env.REACT_APP_AUTHORIZE_URL}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URL}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true&state=code`;
